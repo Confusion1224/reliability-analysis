@@ -119,8 +119,6 @@ This table summarizes various reliability metrics and their interpretations.
 A robust measure for any number of raters, works with nominal, ordinal, interval, or ratio data.
 
 ```python
-from rater_pandas.agreement import krippendorff_alpha_from_df
-
 alpha = krippendorff_alpha_from_df(
     df=ratings_long,
     unit_col='PatientID',
@@ -137,8 +135,6 @@ print(f"Krippendorff's Alpha: {alpha:.3f}")
 Similar to Cohen's Kappa but assumes equal marginal distributions.
 
 ```python
-from rater_pandas.agreement import scotts_pi_from_df
-
 pi = scotts_pi_from_df(
     df=ratings_wide[['RaterA', 'RaterB']],  # For 2 raters
     return_results=False
@@ -151,8 +147,6 @@ print(f"Scott's Pi: {pi:.3f}")
 Measures consistency of a single rater's scores over time (test-retest reliability).
 
 ```python
-from rater_pandas.agreement import spearman_corr_from_df
-
 corr = spearman_intrarater_from_df(
     df=ratings_wide,
     rater_cols=['RaterA', 'RaterB', 'RaterC'],
@@ -166,8 +160,6 @@ print(f"Spearman's Intrarater Correlation: {corr:.3f}")
 Measures internal consistency between multiple raters.
 
 ```python
-from rater_pandas.agreement import cronbachs_alpha_from_df
-
 alpha = cronbach_alpha_from_df(
     df=ratings_wide,
     rater_cols=['RaterA', 'RaterB', 'RaterC']
