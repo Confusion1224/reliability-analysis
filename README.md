@@ -13,10 +13,7 @@ This repository contains functions for calculating inter-rater and intra-rater r
     - Scott's Pi
     - Spearman's Intrarater Correlation
     - Cronbach's Alpha
-
-3. Intraclass Correlation (ICC)
-    - ICC1, ICC2, ICC3, ICC1k, ICC2k, ICC3k
-
+    - 
 ## How to use the Functions
 
 To effectively use the functions for calculating inter-rater and intra-rater reliability, follow these steps:
