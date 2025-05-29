@@ -17,7 +17,28 @@ This repository contains functions for calculating inter-rater and intra-rater r
 3. Intraclass Correlation (ICC)
     - ICC1, ICC2, ICC3, ICC1k, ICC2k, ICC3k
 
-## Load Data
+## How to use the Functions
+
+To effectively use the functions for calculating inter-rater and intra-rater reliability, follow these steps:
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Confusion1224/reliability-analysis.git
+```
+
+### 2. Install required packages
+```bash
+pip install -r pip install -r reliability-analysis/requirements.txt
+```
+
+### 3. Modify the system path and import functions
+```python
+import sys
+sys.path.append('reliability-analysis')
+from functions.metrics import *
+```
+
+### 4. Load Data
 Use pandas to load your rating data into a DataFrame before calculating statistics. Wide format is ideal for most statistics.
 
 ```python
